@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDom from 'react-dom'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+class Message extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1 style={{color:this.props.color}}> {this.props.msg}</h1>
+        <p> we're glade you are here </p>
+      </div>
+    );
+  }
+}
+ReactDom.render(
+  <Message color="blue" msg="How are you today?" />,
   document.getElementById('root')
-);
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+)
